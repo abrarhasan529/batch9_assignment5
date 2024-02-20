@@ -3,3 +3,7 @@
 .font-inter{
     font-family: 'Inter', sans-serif;
 }
+
+li{
+    justify-content: space-between;
+}
