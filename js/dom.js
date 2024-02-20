@@ -9,7 +9,7 @@ for (const botn of allBtn) {
         }
         cnt = cnt-1
         count = count+1;
-
+        document.getElementById('butt').removeAttribute('disabled');
         document.getElementById("seat-left").innerText = cnt;
         document.getElementById("seat-add").innerText = count;
         const ticketName = event.target.innerText;
@@ -45,7 +45,7 @@ for (const botn of allBtn) {
 function grandTotalCost(){
     const totalCost = document.getElementById('total-cost').innerText;
     const convertedTotalCost = parseInt(totalCost);
-    const newVariable = document.getElementById('btn-delete').innerText;
+    const newVariable = document.getElementById('delete-confirm').value;
     if (newVariable === 'NEW15'){
         document.getElementById('grand-total').innerText = convertedTotalCost*0.85;
     } else if (newVariable === 'Couple 20'){
@@ -55,18 +55,9 @@ function grandTotalCost(){
     }
 }
 
-
-
-
-
-
-
-
 document.getElementById('delete-confirm').addEventListener('keyup', function(event){
     const text = event.target.value;
     const deleteButton = document.getElementById('btn-delete');
-    const totalCost = document.getElementById('total-cost').innerText;
-    const convertedTotalCost = parseInt(totalCost);
     if (text === 'NEW15'){
         deleteButton.removeAttribute('disabled');
     } else if (text === 'Couple 20') {
