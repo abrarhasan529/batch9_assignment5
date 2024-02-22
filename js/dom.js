@@ -7,6 +7,7 @@ for (const botn of allBtn) {
         if (count == 4) {
             return;
         }
+        botn.style.backgroundColor = 'green';
         cnt = cnt-1
         count = count+1;
         document.getElementById('butt').removeAttribute('disabled');
